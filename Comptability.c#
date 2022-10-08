@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello  World!");
+
+            //Constante taux decimal TVA
+            const double tva = 0.196; // We create an other const and give her an other valeur
+            
+            //Invte Console
+            Console.Write("Entrer votre prix HT:");
+
+            //Chaine saisie a la console , represente le pht
+
+            string str_pht=Console.ReadLine();
+
+            //transtypage
+            double pht=double.Parse(str_pht);
+
+            //That's also true
+            //double pht=double.Parse(Console.ReadLine());
+            //Calcul
+
+            double pttc=pht*(1.0+tva);
+
+            //Affichage
+
+            Console.WriteLine("Prix TTC:"+pttc.ToString());
+
+            Console.Read();
+        }
+    }
+}
